@@ -1,0 +1,117 @@
+:root {
+    --primary-color:rgb(18,18,18);
+    --highlight-color:rgb(42,42,42);
+    --secondary-color:rgb(35,35,35);
+    --font-color-highlight:rgb(255,255,255);
+    --font-color:#b3b3b3;
+    --bg-color:rgb(0,0,0);
+    --dark-font:rgb(0,0,0);
+}
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: var(--bg-color);
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+    padding:15px;
+    font-family: 'Montserrat';
+}
+.left-container {
+    height:80vh;
+    flex:1.5;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: left;
+
+}
+.right-container {
+    height:100vh;
+    flex:4;
+    padding:10px 20px 20px 30px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    
+}
+.left-container__element {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content:left;
+}
+.left-container__element div {
+    display: flex;
+    flex-direction: row;
+    padding:15px;
+    font-size: 1rem;
+    gap:15px;
+    color: var(--font-color);
+}
+.left-container__element div svg {
+    width:30px;
+    height:30px;
+   color: var(--font-color);
+   fill: var(--font-color)
+}
+
+.left-container__element1 {
+    
+    flex:1;
+}
+.left-container__element2 {
+    flex:5;
+}
+.right-container__search-bar {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.search-bar__controls {
+    margin-bottom: 15px;
+    
+}
+.controls {
+    border-radius: 50%;
+    padding:5px;
+    font-size: 1.4rem;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    border:3px solid black;
+    margin:5px;
+}
+.search-input {
+    background-color: var(--secondary-color);
+    border-radius: 1.4rem;
+    padding:10px;
+    border:3px solid var(--secondary-color);
+    color:var(--font-color-highlight)
+}
+.account-controls {
+    border-radius: 50%;
+    padding:15px;
+    font-size: 1.4rem;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    border:3px solid black;
+    margin:5px;
+}
+.search-filter {
+    background-color: var(--secondary-color);
+    border-radius: 1.4rem;
+    padding:7px;
+    border:3px solid var(--secondary-color);
+    color:var(--font-color-highlight);
+    margin:3px;
+}
+.checked {
+    background-color: var(--font-color-highlight);
+    border:3px solid var(--font-color-highlight);
+    color:var(--secondary-color)
+}
+

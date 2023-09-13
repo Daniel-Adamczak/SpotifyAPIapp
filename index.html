@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat:wght@700&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="left-container">
+        <div class="left-container__element left-container__element1">
+            <div><svg role="img" height="24" width="24" aria-hidden="true" class="Svg-sc-ytk21e-0 haNxPq home-icon"
+                    viewBox="0 0 24 24" data-encore-id="icon">
+                    <path
+                        d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z">
+                    </path>
+                </svg>
+                <h2>Home</h2>
+            </div>
+            <div><svg role="img" height="24" width="24" aria-hidden="true"
+                    class="Svg-sc-ytk21e-0 haNxPq search-active-icon" viewBox="0 0 24 24" data-encore-id="icon">
+                    <path
+                        d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z">
+                    </path>
+                    <path
+                        d="M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 0 1-2.077 5.816l4.344 4.344a1 1 0 0 1-1.414 1.414l-4.353-4.353a9.454 9.454 0 0 1-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z">
+                    </path>
+                </svg>
+                <h2>Search</h2>
+            </div>
+        </div>
+        <div class="left-container__element left-container__element2"></div>
+
+    </div>
+    <div class="right-container">
+        <div class="right-container__search-bar">
+            <div class="search-bar__controls">
+                <button class="controls">&lt;</button>
+                <button class="controls">&gt;</button>
+                <input type="text" class="search-input" onkeydown='queryHandler(this.value)'>
+            </div>
+            <div class="search-bar__controls">
+                <button class="account-controls"></button>
+                <button class="account-controls"></button>
+            </div>
+        </div>
+        <div class="right-container__search-filters">
+            <button class="search-filter checked" typevalue="artist,track,playlist" onclick="typeBtnHandler(this)">All</button>
+            <button class="search-filter" typevalue="artist" onclick="typeBtnHandler(this)">Artists</button>
+            <button class="search-filter" typevalue="track" onclick="typeBtnHandler(this)">Songs</button>
+            <button class="search-filter" typevalue="playlist" onclick="typeBtnHandler(this)">Playlists</button>
+            <button class="search-filter" typevalue="album" onclick="typeBtnHandler(this)">Albums</button>
+            <button class="search-filter" typevalue="audiobook" onclick="typeBtnHandler(this)">Audiobook</button>
+            <button class="search-filter" typevalue="show" onclick="typeBtnHandler(this)">Podcasts &
+                Shows</button>
+            
+        </div>
+        <div class="right-container__title-bar"></div>
+        <div class="right-container__grid-tiles-container"></div>
+        <div class="right-container__search-results">
+            
+            
+        </div>
+    </div>
+    <div class="footer-action-bar"></div>
+
+
+</body>
+
+</html>
