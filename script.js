@@ -12,7 +12,7 @@ async function getToken() {
   });
   console.log("Auth Response:", authResponse);
   const data = await authResponse.json();
-  console.log("Token:", data.access_token);
+  
   return data.access_token;
 } catch(error) {
   console.error('Error fetching token',error);
@@ -27,17 +27,19 @@ async function searchSpotify(query) {
       },
     });
     const data = await response.json();
-    console.log(data);
+    return data
   }
   catch(error){
     console.error('Error fetching data:', error)
   }
 }
-function queryHandler(query) {
+async function queryHandler(query) {
 let formatedQuery = query.replaceAll(' ','%20');
 if(formatedQuery.length>1){
-  searchSpotify(formatedQuery);
+  
+  dataHandler(await searchSpotify(formatedQuery));
 }
+
 }
 const typesBtns = document.querySelectorAll('.search-filter');
 
@@ -53,10 +55,35 @@ function typeBtnHandler(btn) {
 }
 
 function dataHandler(data) {
-  const 
+  
+  const searchResults = document.querySelector('.right-container__search-results');
+  const titleBar = document.querySelector('.right-container__title-bar');
+  console.log('jestem w funkcji data Handler',data)
   switch (types.toString()) {
     case "artist,track,playlist":{
+      console.log('switch -all');
+      let title = document.createElement('h2');
+      title.innerText = 'Best search results';
+      titleBar.appendChild(title);
+      console.log(data.artists.items[0].name);
+      data.artists.items.slice(0,7).forEach(artist =>
+        {
+          
+        let image = document.createElement('img');
+        let container = document.createElement('div');
+        let name = document.createElement('h3');
+        let genre = document.createElement('p');
+          image.src = artist.images[2].url;
+          container.appendChild(image);
+          name.innerText = artist.name;        
+          container.appendChild(name);          
+          genre.innerText = artist.genres.slice(0,3).toString().replaceAll(",",", ");
+          container.appendChild(genre);
 
+          searchResults.appendChild(container);
+          console.log(container);
+        });
+      
     }
     case "artist": {
 
